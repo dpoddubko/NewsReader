@@ -1,0 +1,7 @@
+CREATE TABLE news (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+	news_id INTEGER NOT NULL UNIQUE,
+    title TEXT NOT NULL CHECK(length(title) > 0),
+    content TEXT NOT NULL UNIQUE CHECK(length(content) > 0),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
